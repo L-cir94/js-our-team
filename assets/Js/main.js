@@ -43,4 +43,12 @@ const infoEl = document.querySelector(".row > .info")
 for (let i = 0; i < teams.length; i++) {
     const membro = teams[i];
     console.log(membro)
+    infoEl.innerHTML += 
+//Stampare le stesse informazioni su DOM sottoforma di stringhe
+    `
+    Nome:  ${membro.nome} <br>
+    Ruolo: ${membro.ruolo} <br>
+    Foto:  ${membro.foto} <br>
+    <span></span><br>
+    `
 }
