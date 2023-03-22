@@ -38,3 +38,9 @@ const teams = [
         foto:"barbara-ramos-graphic-designer.jpg"
     },
 ]
+const infoEl = document.querySelector(".row > .info")
+//Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
+for (let i = 0; i < teams.length; i++) {
+    const membro = teams[i];
+    console.log(membro)
+}
