@@ -38,35 +38,45 @@ const teams = [
         foto: "barbara-ramos-graphic-designer.jpg"
     },
 ]
+
 const infoEl = document.querySelector(".row > .info")
+generateCard()
+
+
+
+//funzioni che posso utilizzare
+function generateCard(){
+    
 //Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
-for (let i = 0; i < teams.length; i++) {
-    const membro = teams[i];
-    console.log(membro)
-    infoEl.innerHTML +=
-        /* Stampare le stesse informazioni su DOM sottoforma di stringhe
-       `
-       Nome:  ${membro.nome} <br>
-       Ruolo: ${membro.ruolo} <br>
-       Foto:  ${membro.foto} <br>
-       <span></span><br>
-       ` */
-
-
-        //Organizzare i singoli membri in html
-        `
-    <div class="card text-center">
-        <div class="card-header text-center">
-            <h1>
-                ${membro.nome}
-            </h1>
-        </div>
-        <div class="card-body mt-2">
-            <img src="./assets/img/${membro.foto}" alt="" class="img-fluid rounded-5">
-            <p class="text-center mt-5">
-                ${membro.ruolo}
-            </p>
-        </div>
-    </div> 
-`
+    for (let i = 0; i < teams.length; i++) {
+        const membro = teams[i];
+        console.log(membro)
+        infoEl.innerHTML +=
+            /* Stampare le stesse informazioni su DOM sottoforma di stringhe
+           `
+           Nome:  ${membro.nome} <br>
+           Ruolo: ${membro.ruolo} <br>
+           Foto:  ${membro.foto} <br>
+           <span></span><br>
+           ` */
+    
+    
+            //Organizzare i singoli membri in html
+            `
+        <div class="card text-center">
+            <div class="card-header text-center">
+                <h1>
+                    ${membro.nome}
+                </h1>
+            </div>
+            <div class="card-body mt-2">
+                <img src="./assets/img/${membro.foto}" alt="" class="img-fluid rounded-5">
+                <p class="text-center mt-5">
+                    ${membro.ruolo}
+                </p>
+            </div>
+        </div> 
+    `
+    }
+    
 }
